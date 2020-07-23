@@ -1,5 +1,5 @@
-name: HitPlayerParticle
-main: Hit\Main
+name: HitShowHealth
+main: Health\Main
 api: [3.3.0, 3.0.0, 4.0.0]
 version: 0.0.1
 author: Hariz
