@@ -1,5 +1,6 @@
 # HitShowHealth
-[url=https://imgbb.com/][img]https://i.ibb.co/g3LVtRs/IMG-20200723-100255.jpg[/img][/url]
+
+https://i.ibb.co/g3LVtRs/IMG-20200723-100255.jpg
 
 # Plugin Features
 
