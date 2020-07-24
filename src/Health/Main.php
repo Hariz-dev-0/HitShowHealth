@@ -1,17 +1,14 @@
 <?php
 
-namespace Hit;
+namespace Health;
 
 use pocketmine\Player;
 use pocketmine\Server;
+
 use pocketmine\plugin\PluginBase;
+
 use pocketmine\event\Listener;
-use pocketmine\level\particle\HugeExplodeSeedParticle;
-use pocketmine\command\Command;
-use pocketmine\command\CommandSender;
-use pocketmine\command\CommandExecutor;
-use pocketmine\command\ConsoleCommandSender;
-use pocketmine\math\Vector3;
+
 use pocketmine\event\entity\EntityDamageEvent;
 
 class Main extends PluginBase implements Listener{
@@ -27,20 +24,28 @@ class Main extends PluginBase implements Listener{
         $this->getLogger()->warning("Plugin Has Disable Plugin Error");
     }
     public function onHit(EntityDamageEvent $ev){
-      $cause = $ev->getCause();
-      switch($cause) {
-        case EntityDamageEvent::CAUSE_ENTITY_ATTACK:
-          $dmg = $ev->getDamager();
-          $entity = $ev->getEntity();
-          if($dmg instanceof Player and $entity instanceof Player) {
-            $level = $entity->getLevel();
-            $x = $entity->getX();
-            $y = $entity->getY(0.5);
-            $z = $entity->getZ();
-            $pos = new Vector3($x, $y, $z);
-            $level->addParticle(new HugeExplodeSeedParticle($pos));
-          }
-        break;
-      } 
+        $cause = $ev->getCause();
+        switch($cause){
+            case EntityDamageEvent::CAUSE_ENTITY_ATTACK:
+                $dmg = $ev->getDamager();
+                $entity = $ev->getEntity();
+                if($dmg instanceof Player and $entity instanceof Player){
+                    $health = $entity->getHealth();
+                    $name = $entity->getName();
+                    $maxHealth = $entity->getMaxHealth();
+                     $dmg->sendMessage("§eHealth §a{$name} §4[§e{$health}/{$maxHealth}§4]§c♥");
+                }
+            break;
+            case EntityDamageEvent::CAUSE_PROJECTILE:
+                $dmg = $ev->getDamager();
+                $entity = $ev->getEntity();
+                if($dmg instanceof Player and $entity instanceof Player){
+                    $health = $entity->getHealth();
+                    $name = $entity->getName();
+                    $maxHealth = $entity->getMaxHealth();
+                     $dmg->sendMessage("§eHealth §a{$name} §4[§e{$health}/{$maxHealth}§4]§c♥");
+                 }
+             break;
+        }
     }
 }
