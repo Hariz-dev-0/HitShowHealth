@@ -1,0 +1,13 @@
+---
+#########################
+#Plugin Create By RizzXD Or Hariz#
+#########################
+
+# Tags : {player-name} {line} {health} {maxhealth}
+
+#Player Hit Health
+Player-Hit-Health: "§aHealth §e{player-name} §e[§a{health}/{maxhealth}§e]"
+
+#Bow Hit Health
+Bow-Hit-Health: "§aHealth §e{player-name} §e[§a{health}/{maxhealth}§e]"
+...
