@@ -5,3 +5,15 @@
 ## Plugin Features
 
 Hit Player Unlock Your Enemy Message
+
+## Update
+
+Add Config And Sound Hit Bow
+
+## Version
+
+2.0.0
+
+## My Channel
+
+Subscribe My Channel [Here](https://www.youtube.com/channel/UC4CunLx70br1vrCPDb8LUSQ) 
