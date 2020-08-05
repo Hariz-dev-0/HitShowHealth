@@ -14,10 +14,6 @@ Add Config And Sound Hit Bow
 
 2.0.0
 
-## My Server
-
-My Server [Here](minecraft://?addExternalServer=Hydra|hydraskyblock.my.to:19132)
-
 ## My Channel
 
 Subscribe My Channel [Here](https://www.youtube.com/channel/UC4CunLx70br1vrCPDb8LUSQ) 
